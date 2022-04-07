@@ -1,0 +1,18 @@
+  
+  .delete-button {
+    align-self: flex-end;
+    padding: 16px;
+    margin-right: 1rem;
+    width: 10%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: linear-gradient(
+      90deg,
+      rgb(162, 159, 106) 0%,
+      rgb(149, 167, 95) 100%
+    );
+    color: #fff;
+    text-transform: capitalize;
+  }
+  

@@ -1,0 +1,41 @@
+  
+  .recipe-button, .logout-button {
+    align-self: flex-end;
+    padding: 16px;
+    margin-right: 1rem;
+    width: 10%;
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: linear-gradient(
+      90deg,
+      rgb(162, 159, 106) 0%,
+      rgb(149, 167, 95) 100%
+    );
+    color: #fff;
+    text-transform: capitalize;
+  }
+  
+  .Title {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content:first baseline;
+    padding: 1em;
+    margin-bottom: 2em;
+    color: #fff;
+  }
+
+  .titleName {
+    align-self: center;
+  }
+
+  .header {
+    display: flex;
+    background-color: rgb(93, 93, 171);
+  }
+
+  .logout-button {
+    float: right;
+  }
