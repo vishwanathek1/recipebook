@@ -34,7 +34,8 @@ function AddRecipe(props) {
     const fuse = new Fuse(data, {keys: [
       'name',
       'ingredients',
-      'tags'
+      'tags',
+      'title'
     ]});
     const result = fuse.search(query).map((res) => res.item);
     setData(result)
