@@ -1,13 +1,12 @@
 import './card.scss'
 import { RiCloseCircleLine } from 'react-icons/ri';
-import { TiEdit } from 'react-icons/ti';
-import { useRef, useState } from 'react';
+import { TiEdit } from 'react-icons/ti'
 
 function Card(props) {
 
   const {data, removeRecipe, editRecipe} = props
   const ingredients = data.ingredients.split(',')
-  const tags = data.tags && data.tags.split(',') || []
+  const tags = (data.tags && data.tags.split(',')) || []
   return <div className='cardIcons'><div className='card' key={data.name}>
     <div className="container">
       <h2><b>Title:</b></h2> 

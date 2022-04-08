@@ -2,7 +2,7 @@ import Home from './client/components/Home/Home';
 import './client/components/style.scss';
 import { useEffect, useState } from 'react';
 import Banner from './client/components/Banner/Banner';
-import { Route, Routes, useLocation, Navigate, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import Login from './client/components/Login/Login';
 import PRoutes from './client/PRoutes';
 import { createContext } from "react";
@@ -15,7 +15,6 @@ function App() {
   const loggedIn = parsed && parsed.token ? true : false
   const [user, setUser] = useState({ loggedIn });
   const navigate = useNavigate()
-  const location = useLocation()
 
   useEffect(() => {
     if(user.loggedIn) {

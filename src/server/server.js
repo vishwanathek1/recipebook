@@ -32,7 +32,6 @@ app.get('/login', async(req, res) => {
 
 app.post('/users', async (req, res) => {
   const {username, password} = req.body
-  // await db.connect()
   let user = await db.query(`SELECT * FROM higharc.users where name='${username}'`)
   if(md5(password) === user[0].password) {
     const uuid = generateRandom32()
@@ -89,7 +88,6 @@ app.patch('/updateRecipe', async(req, res) => {
 
 app.get('/recipes', async(req, res) => {
   const {username} = req.query
-  // await db.connect()
   let recipes = await db.objects(`select * from higharc.recipes where username='${username}'`)
   res.send({recipes})
 });

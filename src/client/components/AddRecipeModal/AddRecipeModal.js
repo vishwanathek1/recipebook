@@ -3,7 +3,7 @@ import './AddRecipeModal.scss'
 
 const AddRecipeModal = React.forwardRef(function AddRecipeModal(props, recipeRef) {
 
-    const {data, open, dataToUpdate, isEdit, setIsEdit} = props
+    const {dataToUpdate, isEdit} = props
     const [recName, setRecName] = useState('')
     const [recTitle, setRecTitle] = useState('')
     const [recTags, setRecTags] = useState('')
@@ -15,7 +15,7 @@ const AddRecipeModal = React.forwardRef(function AddRecipeModal(props, recipeRef
             setRecTitle(dataToUpdate.title)
             setRecName(dataToUpdate.name)
             setIngredients(dataToUpdate.ingredients)
-            const tags = dataToUpdate.tags && dataToUpdate.tags.split(',') || []
+            const tags = (dataToUpdate.tags && dataToUpdate.tags.split(',')) || []
             setTags(tags)
         }
     }, [isEdit, dataToUpdate])
@@ -38,6 +38,8 @@ const AddRecipeModal = React.forwardRef(function AddRecipeModal(props, recipeRef
         setRecTitle(e.target.value)
     }
     const addIngredientsToStore = async () => {
+        const session = window.localStorage.getItem('session')
+        const parsed = JSON.parse(session)
         if(isEdit) {
             fetch(`/updateRecipe`, {
                 method: 'PATCH',
@@ -55,7 +57,7 @@ const AddRecipeModal = React.forwardRef(function AddRecipeModal(props, recipeRef
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({title: recTitle, name: recName, tags: recTags, ingredients: ingredients, username: 'Siddhi'})
+                body: JSON.stringify({title: recTitle, name: recName, tags: recTags, ingredients: ingredients, username: parsed.username})
                 }).then(res => res.json())
                 .then(res => console.log(res));
         }

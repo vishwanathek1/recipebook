@@ -1,6 +1,6 @@
 import '../style.scss'
 
-import React, { useState, useEffect, useRef, createRef, useContext } from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import Fuse from "fuse.js";
 import Card from '../Card/Card'
 import AddRecipeModal from '../AddRecipeModal/AddRecipeModal';
@@ -56,7 +56,6 @@ function AddRecipe(props) {
     for(let data of initialData) {
       if(data.name === name) {
         setDataToUpdate(data)
-        // break
       }
     }
     recipeRef.current.style.display = "block";

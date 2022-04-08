@@ -1,5 +1,5 @@
 import './Banner.scss';
-import React, { useState, useEffect, useRef, createRef, useContext } from 'react';
+import React, { useRef, useContext } from 'react';
 import AddRecipeModal from '../AddRecipeModal/AddRecipeModal';
 import { UserContext } from '../../../App';
 
