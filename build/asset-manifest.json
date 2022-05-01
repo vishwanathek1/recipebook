@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/recipebook/static/css/main.17c9fcc2.css",
+    "main.js": "/recipebook/static/js/main.b0364f6a.js",
+    "index.html": "/recipebook/index.html",
+    "main.17c9fcc2.css.map": "/recipebook/static/css/main.17c9fcc2.css.map",
+    "main.b0364f6a.js.map": "/recipebook/static/js/main.b0364f6a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.17c9fcc2.css",
+    "static/js/main.b0364f6a.js"
+  ]
+}
